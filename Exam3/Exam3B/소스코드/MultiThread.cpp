@@ -34,7 +34,7 @@ void Thread_DataGen(ThreadParam* pParam)
 				continue;
 			}
 		}
-		genData = round + myAddr * pParam->targetGenData;
+		genData = TOTAL_NUM_DATA - (round * NUM_DATA_GEN + myAddr + 1);
 		while (pPriQ->insert(genData) == NULL)
 		{
 			sleep_for(std::chrono::milliseconds(100));

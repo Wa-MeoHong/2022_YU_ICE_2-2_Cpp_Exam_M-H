@@ -71,7 +71,7 @@ int main(void)
 	cout << "Testing " << HeapPriQ_int.Name() << "with " << NUM_DATA_GEN << " data generators and ";
 	cout << NUM_DATA_PROC << " data processors" << endl;
 	thrdMon.mtx_console.unlock();
-	for (int round = 0; round < MAX_ROUNDS; round++)
+	for (int round = 1; round <= MAX_ROUNDS; round++)
 	{
 		thrdMon.mtx_console.lock();
 		cout << "Round (" << setw(3) << round << ") : totalDataGenerated = " << setw(3) << thrdMon.totalNumGenData;
